@@ -8,9 +8,19 @@ export default defineConfig({
 	base: '/docs',
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'Bunetic Docs',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			customCss: [
+				// Path to your custom CSS file
+				'./src/styles/custom.css',
+			],
 			sidebar: [
+				{
+					label: 'Start Here',
+					items: [
+						{ label: 'Getting Started', slug: 'start-here/getting-started' },
+					],
+				},
 				{
 					label: 'Guides',
 					items: [

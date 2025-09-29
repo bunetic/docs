@@ -1,0 +1,29 @@
+/* Custom CSS for Bunetic Docs */
+
+:root {
+  /* Override Starlight's default primary color */
+  --sl-color-accent-low: #c5bfb7;
+  --sl-color-accent: #c5bfb7;
+  --sl-color-accent-high: #a8a09a;
+  
+  /* Adjust related accent colors */
+  --sl-color-text-accent: #c5bfb7;
+  --sl-color-accent-emphasis: #a8a09a;
+  
+  /* Link colors */
+  --sl-color-link: #c5bfb7;
+  --sl-color-link-hover: #a8a09a;
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] {
+  --sl-color-accent-low: #c5bfb7;
+  --sl-color-accent: #c5bfb7;
+  --sl-color-accent-high: #d4cfc9;
+  
+  --sl-color-text-accent: #c5bfb7;
+  --sl-color-accent-emphasis: #d4cfc9;
+  
+  --sl-color-link: #c5bfb7;
+  --sl-color-link-hover: #d4cfc9;
+}
