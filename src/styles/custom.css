@@ -2,28 +2,158 @@
 
 :root {
   /* Override Starlight's default primary color */
-  --sl-color-accent-low: #c5bfb7;
-  --sl-color-accent: #c5bfb7;
-  --sl-color-accent-high: #a8a09a;
+  --sl-color-accent-low: #FFED94;
+  --sl-color-accent: #FFED94;
+  --sl-color-accent-high: #FFE66D;
   
   /* Adjust related accent colors */
-  --sl-color-text-accent: #c5bfb7;
-  --sl-color-accent-emphasis: #a8a09a;
+  --sl-color-text-accent: #FFED94;
+  --sl-color-accent-emphasis: #FFE66D;
   
   /* Link colors */
-  --sl-color-link: #c5bfb7;
-  --sl-color-link-hover: #a8a09a;
+  --sl-color-link: #a0998d;
+  --sl-color-link-hover: #8a8075;
+  
+  /* Header background color */
+  --sl-color-bg-nav: #FFED94;
+  
+  /* Logo text color */
+  --sl-color-text-brand: #676767;
 }
 
 /* Dark mode adjustments */
 [data-theme='dark'] {
-  --sl-color-accent-low: #c5bfb7;
-  --sl-color-accent: #c5bfb7;
-  --sl-color-accent-high: #d4cfc9;
+  --sl-color-accent-low: #FFED94;
+  --sl-color-accent: #FFED94;
+  --sl-color-accent-high: #FFF0A5;
   
-  --sl-color-text-accent: #c5bfb7;
-  --sl-color-accent-emphasis: #d4cfc9;
+  --sl-color-text-accent: #FFED94;
+  --sl-color-accent-emphasis: #FFF0A5;
   
-  --sl-color-link: #c5bfb7;
-  --sl-color-link-hover: #d4cfc9;
+  --sl-color-link: #a0998d;
+  --sl-color-link-hover: #8a8075;
+  
+  /* Header background color for dark mode */
+  --sl-color-bg-nav: #FFED94;
+  
+  /* Logo text color for dark mode */
+  --sl-color-text-brand: #676767;
+}
+
+/* Selected tab styling - black text */
+.sidebar a[aria-current="page"],
+.sidebar a[aria-current="page"]:hover,
+.sidebar a[aria-current="page"]:focus {
+  color: #000000 !important;
+  background-color: #FFED94;
+}
+
+/* Ensure sidebar links are visible */
+.sidebar a {
+  color: #333333;
+}
+
+.sidebar a:hover {
+  color: #000000;
+}
+
+/* Force logo/brand text color to gray */
+.site-title,
+.site-title a,
+.site-title a:hover,
+.site-title a:focus,
+[data-starlight] .navbar .navbar-brand,
+[data-starlight] .navbar .navbar-brand a,
+[data-starlight] .navbar .navbar-brand a:hover,
+[data-starlight] .navbar .navbar-brand a:focus {
+  color: #676767 !important;
+}
+
+/* GitHub icon and social links styling */
+.social-icons a,
+.social-icons a:hover,
+.social-icons a:focus,
+[data-starlight] .navbar .social-icons a,
+[data-starlight] .navbar .social-icons a svg {
+  color: #676767 !important;
+  fill: #676767 !important;
+}
+
+/* Content links (including email links) */
+.sl-markdown-content a,
+.sl-markdown-content a:hover,
+.sl-markdown-content a:focus,
+[data-starlight] .sl-markdown-content a,
+[data-starlight] .sl-markdown-content a:hover,
+[data-starlight] .sl-markdown-content a:focus,
+main a,
+main a:hover,
+main a:focus,
+.content a,
+.content a:hover,
+.content a:focus {
+  color: #a0998d !important;
+}
+
+.sl-markdown-content a:hover,
+[data-starlight] .sl-markdown-content a:hover,
+main a:hover,
+.content a:hover {
+  color: #8a8075 !important;
+}
+
+/* Hide dark mode toggle button */
+.theme-toggle,
+[data-starlight] .theme-toggle,
+starlight-theme-select,
+[data-starlight] starlight-theme-select,
+.navbar .theme-select,
+[data-starlight] .navbar .theme-select {
+  display: none !important;
+}
+
+/* Hide divider line next to social icons */
+.social-icons::before,
+[data-starlight] .social-icons::before,
+.navbar .social-icons::before,
+[data-starlight] .navbar .social-icons::before {
+  display: none !important;
+}
+
+/* Table of Contents (page map) link colors - right sidebar */
+.right-sidebar a,
+[data-starlight] .right-sidebar a,
+.starlight__toc a,
+[data-starlight] .starlight__toc a,
+.toc a,
+[data-starlight] .toc a,
+.table-of-contents a,
+[data-starlight] .table-of-contents a {
+  color: #a0998d !important;
+}
+
+.right-sidebar a:hover,
+[data-starlight] .right-sidebar a:hover,
+.starlight__toc a:hover,
+[data-starlight] .starlight__toc a:hover,
+.toc a:hover,
+[data-starlight] .toc a:hover,
+.table-of-contents a:hover,
+[data-starlight] .table-of-contents a:hover {
+  color: #8a8075 !important;
+}
+
+/* Dark mode content links - brighter colors for visibility */
+[data-theme='dark'] .sl-markdown-content a,
+[data-theme='dark'] [data-starlight] .sl-markdown-content a,
+[data-theme='dark'] main a,
+[data-theme='dark'] .content a {
+  color: #E6C547 !important;
+}
+
+[data-theme='dark'] .sl-markdown-content a:hover,
+[data-theme='dark'] [data-starlight] .sl-markdown-content a:hover,
+[data-theme='dark'] main a:hover,
+[data-theme='dark'] .content a:hover {
+  color: #F2D865 !important;
 }

@@ -9,7 +9,10 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Bunetic Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			social: [
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/bunetic' },
+				{ icon: 'discord', label: 'Discord', href: 'https://discord.gg/VmydZEjhSz' }
+			],
 			customCss: [
 				// Path to your custom CSS file
 				'./src/styles/custom.css',
@@ -19,18 +22,10 @@ export default defineConfig({
 					label: 'Start Here',
 					items: [
 						{ label: 'Getting Started', slug: 'start-here/getting-started' },
+						{ label: 'Application', slug: 'start-here/application' },
+						{ label: 'Usage', slug: 'start-here/usage' },
+						{ label: 'Support', slug: 'support' },
 					],
-				},
-				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
-				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
 				},
 			],
 		}),
