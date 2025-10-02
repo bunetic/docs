@@ -3,8 +3,6 @@ title: Terms of Service
 description: Terms of Service for Bunetic platform.
 ---
 
-# Terms of Service
-
 **Effective Date:** October 1, 2025  
 **Last Updated:** October 1, 2025
 

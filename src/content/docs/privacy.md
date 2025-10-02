@@ -3,8 +3,6 @@ title: Privacy Policy
 description: Privacy Policy for Bunetic platform.
 ---
 
-# Privacy Policy
-
 **Effective Date:** October 1, 2025  
 **Last Updated:** October 1, 2025
 
