@@ -30,8 +30,8 @@ export default defineConfig({
 				{
 					label: 'Legal',
 					items: [
-						{ label: 'Terms of Service', slug: 'terms' },
-						{ label: 'Privacy Policy', slug: 'privacy' },
+						{ label: 'Terms', slug: 'terms' },
+						{ label: 'Privacy', slug: 'privacy' },
 					],
 				},
 			],
