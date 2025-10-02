@@ -30,14 +30,25 @@
   --sl-color-text-accent: #FFED94;
   --sl-color-accent-emphasis: #FFF0A5;
   
-  --sl-color-link: #a0998d;
-  --sl-color-link-hover: #8a8075;
+  /* Better link colors for dark mode */
+  --sl-color-link: #E6C547;
+  --sl-color-link-hover: #F2D865;
   
   /* Header background color for dark mode */
   --sl-color-bg-nav: #FFED94;
   
   /* Logo text color for dark mode */
   --sl-color-text-brand: #676767;
+  
+  /* Better text colors for dark mode */
+  --sl-color-text-1: #f9fafb;
+  --sl-color-text-2: #d1d5db;
+  --sl-color-text-3: #9ca3af;
+  
+  /* Better background colors for dark mode */
+  --sl-color-bg: #1f2937;
+  --sl-color-bg-1: #374151;
+  --sl-color-bg-2: #4b5563;
 }
 
 /* Selected tab styling - black text */
@@ -45,7 +56,19 @@
 .sidebar a[aria-current="page"]:hover,
 .sidebar a[aria-current="page"]:focus {
   color: #000000 !important;
-  background-color: #FFED94;
+  background-color: #FFED94 !important;
+  font-weight: 600 !important;
+  border-radius: 4px !important;
+}
+
+/* Dark mode selected tab styling - ensure dark text on yellow background */
+[data-theme='dark'] .sidebar a[aria-current="page"],
+[data-theme='dark'] .sidebar a[aria-current="page"]:hover,
+[data-theme='dark'] .sidebar a[aria-current="page"]:focus {
+  color: #000000 !important;
+  background-color: #FFED94 !important;
+  font-weight: 600 !important;
+  border-radius: 4px !important;
 }
 
 /* Ensure sidebar links are visible */
@@ -55,6 +78,15 @@
 
 .sidebar a:hover {
   color: #000000;
+}
+
+/* Dark mode sidebar links */
+[data-theme='dark'] .sidebar a {
+  color: #d1d5db !important;
+}
+
+[data-theme='dark'] .sidebar a:hover {
+  color: #f9fafb !important;
 }
 
 /* Force logo/brand text color to gray */
@@ -67,6 +99,60 @@
 [data-starlight] .navbar .navbar-brand a:hover,
 [data-starlight] .navbar .navbar-brand a:focus {
   color: #676767 !important;
+}
+
+/* Page title and breadcrumb text in header */
+.display-current,
+[data-starlight] .display-current,
+.display-current *,
+[data-starlight] .display-current *,
+.navbar .page-title,
+[data-starlight] .navbar .page-title,
+.navbar .breadcrumb,
+[data-starlight] .navbar .breadcrumb,
+.navbar .page-header,
+[data-starlight] .navbar .page-header,
+.navbar h1,
+[data-starlight] .navbar h1,
+.navbar .title,
+[data-starlight] .navbar .title,
+.navbar .navbar-content,
+[data-starlight] .navbar .navbar-content,
+.navbar .navbar-content *,
+[data-starlight] .navbar .navbar-content *,
+.navbar .navbar-inner,
+[data-starlight] .navbar .navbar-inner,
+.navbar .navbar-inner *,
+[data-starlight] .navbar .navbar-inner * {
+  color: #374151 !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode page title and breadcrumb text */
+[data-theme='dark'] .display-current,
+[data-theme='dark'] [data-starlight] .display-current,
+[data-theme='dark'] .display-current *,
+[data-theme='dark'] [data-starlight] .display-current *,
+[data-theme='dark'] .navbar .page-title,
+[data-theme='dark'] [data-starlight] .navbar .page-title,
+[data-theme='dark'] .navbar .breadcrumb,
+[data-theme='dark'] [data-starlight] .navbar .breadcrumb,
+[data-theme='dark'] .navbar .page-header,
+[data-theme='dark'] [data-starlight] .navbar .page-header,
+[data-theme='dark'] .navbar h1,
+[data-theme='dark'] [data-starlight] .navbar h1,
+[data-theme='dark'] .navbar .title,
+[data-theme='dark'] [data-starlight] .navbar .title,
+[data-theme='dark'] .navbar .navbar-content,
+[data-theme='dark'] [data-starlight] .navbar .navbar-content,
+[data-theme='dark'] .navbar .navbar-content *,
+[data-theme='dark'] [data-starlight] .navbar .navbar-content *,
+[data-theme='dark'] .navbar .navbar-inner,
+[data-theme='dark'] [data-starlight] .navbar .navbar-inner,
+[data-theme='dark'] .navbar .navbar-inner *,
+[data-theme='dark'] [data-starlight] .navbar .navbar-inner * {
+  color: #1f2937 !important;
+  font-weight: 600 !important;
 }
 
 /* GitHub icon and social links styling */
@@ -102,14 +188,152 @@ main a:hover,
   color: #8a8075 !important;
 }
 
-/* Hide dark mode toggle button */
+/* Theme toggle button styling */
 .theme-toggle,
 [data-starlight] .theme-toggle,
 starlight-theme-select,
 [data-starlight] starlight-theme-select,
 .navbar .theme-select,
 [data-starlight] .navbar .theme-select {
-  display: none !important;
+  color: #1f2937 !important;
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  border: 1px solid #374151 !important;
+  border-radius: 6px !important;
+  padding: 8px !important;
+  transition: all 0.2s ease !important;
+  font-weight: 600 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Disable focus outline for Astro-generated classes */
+[class*="astro-"]:focus,
+[class*="astro-"]:focus-visible,
+[class*="astro-"]:focus-within {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #374151 !important;
+}
+
+/* Theme toggle button text and icons */
+.theme-toggle *,
+[data-starlight] .theme-toggle *,
+starlight-theme-select *,
+[data-starlight] starlight-theme-select *,
+.navbar .theme-select *,
+[data-starlight] .navbar .theme-select *,
+.theme-toggle svg,
+[data-starlight] .theme-toggle svg,
+starlight-theme-select svg,
+[data-starlight] starlight-theme-select svg,
+.navbar .theme-select svg,
+[data-starlight] .navbar .theme-select svg {
+  color: #1f2937 !important;
+  fill: #1f2937 !important;
+  stroke: #1f2937 !important;
+}
+
+.theme-toggle:hover,
+[data-starlight] .theme-toggle:hover,
+starlight-theme-select:hover,
+[data-starlight] starlight-theme-select:hover,
+.navbar .theme-select:hover,
+[data-starlight] .navbar .theme-select:hover {
+  color: #000000 !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-color: #1f2937 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) !important;
+  outline: none !important;
+}
+
+.theme-toggle:focus,
+[data-starlight] .theme-toggle:focus,
+starlight-theme-select:focus,
+[data-starlight] starlight-theme-select:focus,
+.navbar .theme-select:focus,
+[data-starlight] .navbar .theme-select:focus {
+  outline: none !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) !important;
+  border-color: #1f2937 !important;
+}
+
+/* Theme toggle button hover text and icons */
+.theme-toggle:hover *,
+[data-starlight] .theme-toggle:hover *,
+starlight-theme-select:hover *,
+[data-starlight] starlight-theme-select:hover *,
+.navbar .theme-select:hover *,
+[data-starlight] .navbar .theme-select:hover *,
+.theme-toggle:hover svg,
+[data-starlight] .theme-toggle:hover svg,
+starlight-theme-select:hover svg,
+[data-starlight] starlight-theme-select:hover svg,
+.navbar .theme-select:hover svg,
+[data-starlight] .navbar .theme-select:hover svg {
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+}
+
+/* Dark mode theme toggle styling */
+[data-theme='dark'] .theme-toggle,
+[data-theme='dark'] [data-starlight] .theme-toggle,
+[data-theme='dark'] starlight-theme-select,
+[data-theme='dark'] [data-starlight] starlight-theme-select,
+[data-theme='dark'] .navbar .theme-select,
+[data-theme='dark'] [data-starlight] .navbar .theme-select {
+  color: #1f2937 !important;
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  border: 1px solid #374151 !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode theme toggle text and icons */
+[data-theme='dark'] .theme-toggle *,
+[data-theme='dark'] [data-starlight] .theme-toggle *,
+[data-theme='dark'] starlight-theme-select *,
+[data-theme='dark'] [data-starlight] starlight-theme-select *,
+[data-theme='dark'] .navbar .theme-select *,
+[data-theme='dark'] [data-starlight] .navbar .theme-select *,
+[data-theme='dark'] .theme-toggle svg,
+[data-theme='dark'] [data-starlight] .theme-toggle svg,
+[data-theme='dark'] starlight-theme-select svg,
+[data-theme='dark'] [data-starlight] starlight-theme-select svg,
+[data-theme='dark'] .navbar .theme-select svg,
+[data-theme='dark'] [data-starlight] .navbar .theme-select svg {
+  color: #1f2937 !important;
+  fill: #1f2937 !important;
+  stroke: #1f2937 !important;
+}
+
+[data-theme='dark'] .theme-toggle:hover,
+[data-theme='dark'] [data-starlight] .theme-toggle:hover,
+[data-theme='dark'] starlight-theme-select:hover,
+[data-theme='dark'] [data-starlight] starlight-theme-select:hover,
+[data-theme='dark'] .navbar .theme-select:hover,
+[data-theme='dark'] [data-starlight] .navbar .theme-select:hover {
+  color: #000000 !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-color: #1f2937 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Dark mode theme toggle hover text and icons */
+[data-theme='dark'] .theme-toggle:hover *,
+[data-theme='dark'] [data-starlight] .theme-toggle:hover *,
+[data-theme='dark'] starlight-theme-select:hover *,
+[data-theme='dark'] [data-starlight] starlight-theme-select:hover *,
+[data-theme='dark'] .navbar .theme-select:hover *,
+[data-theme='dark'] [data-starlight] .navbar .theme-select:hover *,
+[data-theme='dark'] .theme-toggle:hover svg,
+[data-theme='dark'] [data-starlight] .theme-toggle:hover svg,
+[data-theme='dark'] starlight-theme-select:hover svg,
+[data-theme='dark'] [data-starlight] starlight-theme-select:hover svg,
+[data-theme='dark'] .navbar .theme-select:hover svg,
+[data-theme='dark'] [data-starlight] .navbar .theme-select:hover svg {
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
 }
 
 /* Hide divider line next to social icons */
